@@ -1,0 +1,14 @@
+button{
+   margin-left: 10px;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+}
+form{
+    margin-bottom: 60px;
+}
+body {
+    font-family: "open_sansregular";
+    font-size: 1.5rem;
+}

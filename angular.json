@@ -25,9 +25,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/smartwizard/dist/css/smart_wizard.css",
+              "node_modules/smartwizard/dist/css/smart_wizard_all.css"
             ],
-            "scripts": []
+            "scripts": [
+            "node_modules/jquery/dist/jquery.min.js",
+            "node_modules/smartwizard/dist/js/jquery.smartWizard.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -87,12 +93,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css","node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "af1316d2-92b7-49cc-bdf9-a5138553293f"
   }
 }

@@ -1,0 +1,209 @@
+<!-- <div b-63fg761v36 class="nav-wraper" style="margin-top: 3rem;">
+    <div b-63fg761v36 class="container-fluid">
+        <div b-63fg761v36 class="row">
+            <div b-63fg761v36 class="col-12 col-sm-12 col-md-12">
+                <nav b-63fg761v36 class="navbar-expand-lg custom-nav w-100">
+                    <div b-63fg761v36 class="region region-navigation">
+                        <section b-63fg761v36 id="block-mainnavigation" class="block block-superfish block-superfishmain clearfix">
+                            <ul b-63fg761v36 id="superfish-main" class="menu sf-menu sf-main sf-horizontal sf-style-none sf-js-enabled sf-shadow d-flex align-items-center">
+
+                                        <li b-63fg761v36 id="main-standardfront-page" class="active-trail sf-depth-1 sf-no-children"><a b-63fg761v36 href="/Backoffice/Applications" class="is-active sf-depth-1">Home</a></li>
+                                            <li b-63fg761v36 class="dropdown dropdown-toggle fs-2" id="dropdownMenuButton" style="width: 500rem;" style="margin-left: 1rem; margin-right: 2rem; min-width:fit-content;">
+                                                <a b-63fg761v36 href="#" class="sf-depth-1 menuparent sf-with-ul">
+                                                    <label b-63fg761v36 data-hi="स्वागत" data-en="Welcome">Welcome</label> Alok Sinha
+(SCCSL - Lucknow)                                                            </a>
+                                                <ul b-63fg761v36 style="background-color:#23527c; margin-top: -10px;" id="submenu-list" class="dropdown-menu fs-2">
+                                                    <li b-63fg761v36><a class="dropdown-item" style="text-align: left; font-size: 18px;" href="/Backoffice/ChangePassword"><label b-63fg761v36 data-en="Change Password" data-hi="पासवर्ड बदलें">Change Password</label></a></li>
+                                                </ul>
+                                            </li>
+                                            <li b-63fg761v36 id="main-menu-link-content5e8469ae-9ce4-49de-b055-74096f3333bf" style="width: 1000rem;" class="sf-depth-1 sf-no-children"><a b-63fg761v36 href="#" class="sf-depth-1 menuparent sf-with-ul"><label b-63fg761v36 data-hi="डैशबोर्ड" data-en="Dashboard">Dashboard</label></a></li>
+                                            <li b-63fg761v36 id="main-menu-link-content5e8469ae-9ce4-49de-b055-74096f3333bf" style="width: 1000rem;" class="sf-depth-1 sf-no-children"><a b-63fg761v36 href="/Backoffice/RequestStatus" class="sf-depth-1 menuparent sf-with-ul"><label b-63fg761v36 data-hi="डिजिटल हस्ताक्षर स्थिति" data-en="Digital Signature Status">Digital Signature Status</label></a></li>
+                                        <li b-63fg761v36 style="border-right: 2px solid white; height:2rem;"></li>
+                                        <li b-63fg761v36 id="main-menu-link-content5e8469ae-9ce4-49de-b055-74096f3333bf"
+                                        class="fs-2 sf-depth-1 sf-no-children" style="margin-left: 1rem; margin-right: 1rem; min-width:fit-content;">
+                                            <a b-63fg761v36 href="/Grievance" class="sf-depth-1 menuparent sf-with-ul">
+                                                <label b-63fg761v36 for="edit-pass" class="control-label js-form-required form-required"
+                                                data-hi="शिकायत"
+                                                data-en="Grievance"
+                                                style="font-weight: bold;">Grievance</label>
+                                            </a>
+                                        </li>
+                                            <li b-63fg761v36 id="main-menu-link-content5e8469ae-9ce4-49de-b055-74096f3333bf" style="display: flex; justify-content: flex-end; width: 100%;" class="sf-depth-1 sf-no-children"><a href="/Backoffice/osdLogout" class="sf-depth-1 menuparent sf-with-ul"><label b-63fg761v36 data-hi="लॉग आउट" data-en="Logout">Logout</label></a></li>
+                            </ul>
+                        </section>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="container1" style="height: 100%;">
+    <div class="dashboard" style="height: 100%;">
+
+        <div id="ApplicationStatus">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active tabs" data-bs-toggle="tab" data-bs-target="#AuditorRecommended" type="button"
+                            role="tab" aria-controls="AuditorRecommended" aria-selected="true">
+                        <label data-en="AuditorRecommended" data-hi="विचाराधीन"> 0 to 200000 </label>
+
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link tabs" data-bs-toggle="tab" data-bs-target="#AuditorNotRecommended" type="button"
+                            role="tab" aria-controls="AuditorNotRecommended" aria-selected="false">
+                        <label data-en="AuditorNotRecommended" data-hi="विचाराधीन">200000 to 500000</label>
+
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link tabs" data-bs-toggle="tab" data-bs-target="#AuditorNotRecommended" type="button"
+                            role="tab" aria-controls="AuditorNotRecommended" aria-selected="false">
+                        <label data-en="AuditorNotRecommended" data-hi="विचाराधीन">Recommended</label>
+
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link tabs" data-bs-toggle="tab" data-bs-target="#AuditorNotRecommended" type="button"
+                            role="tab" aria-controls="AuditorNotRecommended" aria-selected="false">
+                        <label data-en="AuditorNotRecommended" data-hi="विचाराधीन">Not Recommended</label>
+
+                    </button>
+                </li>
+            </ul>
+            <div class="AuditorRecommendedapps tab-pane fade show active">
+                <div class="table-responsive">
+                    <table class="table table-striped" id="auditorrecommended-table">
+                        <thead>
+                            <tr>
+
+                                                                    <th><input id="headerCheckBox" type="checkbox" onchange="toggleAllApplications()" /></th>
+                                                                                                        <th>Sr No</th>
+                                <th><label data-hi="दावे की तारीख" data-en="Date Of Claim">Date Of Claim</label></th>
+                                <th><label data-hi="CRN संख्या" data-en="CRN No">CRN No</label></th>
+                                <th><label data-hi="दावों की संख्या" data-en="Number Of Claims">Number Of Claims</label></th>
+                                <th><label data-hi="कुल राशि" data-en="Total Amount">Total Amount</label></th>
+                                <th><label data-hi="उम्र बढ़ने" data-en="Aeging">Aging (Pending Since Days)</label></th>
+                                <th><label data-hi="कार्यों" data-en="Actions">Actions</label></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                                <td><input class="rowCheck" type="checkbox" data-depositorId="9f23a418-0497-8e49-a090-3d755fd944b3" /></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                <a title="Open Application">Review</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <button type="button" id="btnEngagementPartnerSubmit" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#engagemntPartnerModal">Submit
+             </button>
+        </div>
+
+    </div>
+</div>
+<!-- The Modal -->
+<div class="modal" id="engagemntPartnerModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Password for Digital Signature</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="passwordId">Password:</label>
+                    <span style="font-size: small;">Please provide password for PFX file for Digital Signature.</span>
+                    <input type="password" class="form-control" id="txtPasswordId">
+                </div>
+                <label id="lblMessage" style="color:red"></label>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                <button id="bulkapprovedid" type="button" onclick="BulkApprovedngagementPartner()" class="btn btn-primary" data-bs-dismiss="modal">Approve</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="twotofiveapps tab-pane fade show">
+    <div class="table-responsive">
+        <table class="table table-striped" id="twotofive-table">
+            @*<table id="SocietyRecommended-applications-table" class="table table-striped">*@
+            <thead>
+                <tr>
+                    @{
+                        if (ViewBag.Role == "OSD" || ViewBag.Role == "CRCS")
+                        {
+                                <text>
+                                <td>
+                                </td>
+                                </text>
+                        }
+                    }
+                    <th>Sr No</th>
+                    <th><label data-hi="दावे की तारीख" data-en="Date Of Claim">Date Of Claim</label></th>
+                    <th><label data-hi="CRN संख्या" data-en="CRN No">CRN No</label></th>
+                    <th><label data-hi="दावों की संख्या" data-en="Number Of Claims">Number Of Claims</label></th>
+                    <th><label data-hi="कुल राशि" data-en="Total Amount">Total Amount</label></th>
+                    <th><label data-hi="उम्र बढ़ने" data-en="Aeging">Aging (Pending Since Days)</label></th>
+                    <th><label data-hi="कार्यों" data-en="Actions">Actions</label></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @{
+                    j = 1;
+                }
+                @if (ViewBag.Role == "OSD")
+                {
+
+                    @foreach (var item in Model.pending2To5)
+                    {
+                        <tr>
+                             @{
+                            if (ViewBag.Role == "OSD" || ViewBag.Role == "CRCS")
+                            {
+                                                                <text>
+                                                                <td><input class="rowCheck" type="checkbox" data-depositorId="@item.DepositorID" /></td>
+                                                                </text>
+                            }
+                          }
+                            <td>
+                                @(
+                                    j++
+                                    )
+                            </td>
+                            <td>@item.DepositorMembershipVerifiedOn.Value.ToString("dd-MMM-yyyy")</td>
+                            <td>@Html.DisplayFor(modelItem => item.CRNNo)</td>
+                            <td>@Html.DisplayFor(modelItem => item.TotalCount)</td>
+                            <td>₹ @Html.DisplayFor(modelItem => item.AmountSum)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Aging)</td>
+                            <td>
+                                <a title="Open Application" asp-action="Application" asp-route-id="@item.DepositorID" asp-route-id1="Auditor-Approved" asp-route-status="@item.PreviousPiplineStatus">Review</a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+
+        </table>
+    </div> -->

@@ -1,0 +1,497 @@
+<!-- SmartWizard html -->
+<div id="smartwizard" dir="" class="sw sw-justified sw-theme-arrows">
+    <div class="row">
+        <div class="col-md-7 bg-light">
+            <h4><a href="/Backoffice/Applications">Applications</a> / 23072500029825</h4>
+        </div>
+        <div class="col-md-5"><a class="btn btn-secondary pull-right" href="/Backoffice/Applications"><span class="glyphicon glyphicon-arrow-left"></span> Back</a></div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-header" style="background-color: #ee931a; color: white;">CRN No: 23072500029825</div>
+    </div>
+    <br>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link default done" href="#step-1">
+                <span class="num">1</span>
+                <span><label data-hi="दस्तावेज़" data-en="Documents">Documents</label></span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link default active" href="#step-3">
+                <span class="num">2</span>
+                <span><label data-hi="व्यक्तिगत विवरण" data-en="Personal Details">Personal Details</label></span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link default" href="#step-2">
+                <span class="num">3</span>
+                <span><label data-hi="दावा विवरण" data-en="Claim Details">Claim Details</label></span>
+            </a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+
+        <!-- Documents -->
+        <div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1" style="display: none;">
+            <div id="documentsContainer">
+                <div class="row">
+                    <div class="col">
+                            <!-- <div class="mb-3">
+                                <label class="form-label">PAN</label>
+                                <a href="#" class="ml-1 pe-auto" onclick="openDocumentModal({&quot;DocumentTitle&quot;: &quot;PAN&quot;, &quot;DocumentPath&quot;: &quot;https://crcs-staging.s3.ap-south-1.amazonaws.com/23072500029825/23072500029825_PAN?X-Amz-Expires=1800&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAR6VZYSQE6UIJDKWK/20230903/ap-south-1/s3/aws4_request&amp;X-Amz-Date=20230903T202704Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=42d07e8d7e180a0df4014b6e272595cd1b9b126c16d0855faaaf52ffea19670d&quot;})">View</a>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Claim Request Form</label>
+                                <a href="#" class="ml-1 pe-auto" onclick="openDocumentModal({&quot;DocumentTitle&quot;: &quot;Claim Request Form&quot;, &quot;DocumentPath&quot;: &quot;https://crcs-staging.s3.ap-south-1.amazonaws.com/23072500029825/23072500029825_Claim%20Request%20Form?X-Amz-Expires=1800&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAR6VZYSQE6UIJDKWK/20230903/ap-south-1/s3/aws4_request&amp;X-Amz-Date=20230903T202704Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=eb82e8b803c9c6e0c2a3cd5d245c8700381a0ef1deae869778ef9541a56499bd&quot;})">View</a>
+                            </div> -->
+                    </div>
+                    <div class="col">
+                        <div id="previewUploadedFileContainerID" class="h-100 fs-3 d-flex justify-content-center align-items-center text-danger"></div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Document - </h1>
+                                <button type="button" class="btn-close" style="margin-right:0;" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="d-flex flex-column justify-content-between">
+                                    <embed id="docPreview" name="docPreview" src="" style="width: 640px; height: 640px;">
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Personal Details -->
+        <div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2" style="display: block;">
+            <form id="personalDetialsForm" action="/Backoffice" method="post">
+
+                <div class="mb-3">
+                    <label class="form-label">First Name</label>
+                    Ganesh Kumar Satpathy
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Date of Birth</label>
+                    11-09-1995
+                </div>
+
+
+                <div class="mb-3">
+                    <label class="form-label">Father/Husband Name</label>
+                    
+                </div>
+
+
+
+                <div class="mb-3">
+                    <label class="form-label">Email (optional)</label>
+                    ganeshsatpathy76@gmail.com
+                </div>
+
+            <input name="RequestVerificationToken" type="hidden" value="CfDJ8JYvjaJdtthIuFY_VsaKh3vfymo7S4jx4w_H9o7zLOVcKaz0wgWWoj6O_q-EshH5mbY1PZ7USEqC2XD-fpLAF0Uq6Bg-1aFibjK43k5O8m5EjyBejV33m7xAVA-Ktr_wi-MePjYbm5orS-ZREU3uAk0"></form>
+        </div>
+
+
+        <!-- Claim Details -->
+        <div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3" style="display: none;">
+            <div class="mb-3 horizontal-scrollable">
+                <table class="table table-striped" style="border: 1px solid black">
+                    <thead>
+                        <tr>
+                            <th style="border: 1px solid black" scope="col">Sr No</th>
+                            <th style="border: 1px solid black" scope="col">Claim Id</th>
+                            <th style="border: 1px solid black" scope="col">Member Id</th>
+                            <th style="border: 1px solid black" scope="col">Status</th>
+                            <th style="border: 1px solid black" scope="col">Account No</th>
+                            <th style="border: 1px solid black" scope="col">Deposit<br>Date</th>
+                            <th style="border: 1px solid black" scope="col">Certificate /<br>Passbook</th>
+                            <th style="border: 1px solid black" scope="col">Deposit<br>Amount</th>
+                            <th style="border: 1px solid black" scope="col">Partial<br>Paid</th>
+                            <th style="border: 1px solid black" scope="col">Loan<br>Amt</th>
+                            <th style="border: 1px solid black" scope="col">Loan<br>Repaid</th>
+                            <th style="border: 1px solid black" scope="col">Society<br>Deposit<br>Amount</th>
+                            <th style="border: 1px solid black" scope="col">Society<br>Partial<br>Paid</th>
+                            <th style="border: 1px solid black" scope="col">Society<br>Loan<br>Amt</th>
+                            <th style="border: 1px solid black" scope="col">Society<br>Loan<br>Repaid</th>
+                            <th style="border: 1px solid black" scope="col">Society<br>Refund<br>Amount</th>
+                            <th style="border: 1px solid black" scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <th style="border: 1px solid black">1</th>
+                                <th style="border: 1px solid black">1</th>
+                                <td style="border: 1px solid black">18131603374</td>
+                                <td style="border: 1px solid black">Auditor-Approved</td>
+                                <td style="border: 1px solid black">18136700398</td>
+                                <td style="border: 1px solid black">10-12-2016</td>
+                                <td style="border: 1px solid black">274003731160</td>
+                                <td style="border: 1px solid black">₹ 94500.0</td>
+                                <td style="border: 1px solid black">₹ </td>
+                                <td style="border: 1px solid black">₹ </td>
+                                <td style="border: 1px solid black">₹ </td>
+                                <td style="border: 1px solid black; background-color: aqua" class="lblSocietyDepositAmount" data-id="societydepositamount_5abcb625-fd6f-c441-a6da-1ad762a828bf">₹ 93000.0</td>
+                                <td style="border: 1px solid black; background-color: aqua" class="lblSocietyPartialPaid" data-id="societypartialpaid_5abcb625-fd6f-c441-a6da-1ad762a828bf">₹ 0.0</td>
+                                <td style="border: 1px solid black; background-color: aqua" class="lblSocietyLoanAmount" data-id="societyloanamount_5abcb625-fd6f-c441-a6da-1ad762a828bf">₹ 0.0</td>
+                                <td style="border: 1px solid black; background-color: aqua" class="lblSocietyLoanRepaid" data-id="societyloanrepaid_5abcb625-fd6f-c441-a6da-1ad762a828bf">₹ 0.0</td>
+                                <td style="border: 1px solid black; background-color: aqua" class="lblSocietyRefundAmount" data-id="societyrefundamount_5abcb625-fd6f-c441-a6da-1ad762a828bf">₹ 93000.0</td>
+                                <td style="border: 1px solid black; background-color: aqua">
+                                        <a class="decisionLink" data-id="decision_5abcb625-fd6f-c441-a6da-1ad762a828bf" data-app="{&quot;DepositorClaimId&quot;:&quot;5abcb625-fd6f-c441-a6da-1ad762a828bf&quot;,&quot;Status&quot;:&quot;Auditor-Approved&quot;,&quot;CRNNo&quot;:&quot;1&quot;,&quot;MemberNo&quot;:&quot;18131603374&quot;,&quot;AccountNo&quot;:&quot;18136700398&quot;,&quot;CertificateNo&quot;:&quot;274003731160&quot;,&quot;ReceiptNo&quot;:&quot;80623135864&quot;,&quot;DepositDate&quot;:&quot;10-12-2016&quot;,&quot;SocietyCode&quot;:&quot;1&quot;,&quot;DepositAmount&quot;:94500.0,&quot;LoanAmount&quot;:null,&quot;LoanAmountRepaid&quot;:null,&quot;PartialPaid&quot;:null,&quot;SchemeCode&quot;:null,&quot;SocietyDepositAmount&quot;:93000.0,&quot;SocietyPartialPaid&quot;:0.0,&quot;SocietyLoanAmount&quot;:0.0,&quot;SocietyLoanRepaid&quot;:0.0,&quot;SocietyRefundAmount&quot;:93000.0,&quot;SocietyFullName&quot;:&quot;GANESH KUMAR SATPATHY&quot;,&quot;SocietyFHName&quot;:&quot;BUDDHESHWAR SATPATHY&quot;,&quot;SocietyDOB&quot;:&quot;10-09-1995&quot;,&quot;AccountFullName&quot;:&quot;GANESH KUMAR SATPATHY&quot;,&quot;AccountFHName&quot;:&quot;BUDDHESHWAR SATPATHY&quot;,&quot;AccountDOB&quot;:&quot;10-09-1995&quot;,&quot;SocietyMembershipNo&quot;:&quot;18131603374&quot;,&quot;SocietyAccountNo&quot;:&quot;18136700398&quot;,&quot;SocietyCertificateNo&quot;:&quot;0&quot;,&quot;SocietyAccountOpeningDate&quot;:&quot;10-12-2016&quot;,&quot;PipelineStatus&quot;:1,&quot;RejectReasons&quot;:[],&quot;Documents&quot;:[{&quot;DepositorClaimDocumentId&quot;:&quot;012857f7-60b5-2880-e063-0100007faaf5&quot;,&quot;DocumentTitle&quot;:&quot;Certificate&quot;,&quot;DocumentFilePath&quot;:null,&quot;DocumentCreatedOn&quot;:&quot;2023-07-25T12:34:37+05:30&quot;,&quot;DocumentFileUrl&quot;:&quot;https://crcs-staging.s3.ap-south-1.amazonaws.com/23072500029825/Depositor/23072500029825_25b6bc5a-6ffd-41c4-a6da-1ad762a828bf_Certificate?X-Amz-Expires=1800&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAR6VZYSQE6UIJDKWK/20230903/ap-south-1/s3/aws4_request&amp;X-Amz-Date=20230903T202704Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=59331bc2984043b8690d35fcbdc87cd500660122bb42732efe5159332d9f69e6&quot;,&quot;DocumentLevel&quot;:&quot;Depositor&quot;,&quot;DepositorClaimId&quot;:&quot;5abcb625-fd6f-c441-a6da-1ad762a828bf&quot;},{&quot;DepositorClaimDocumentId&quot;:&quot;f676c39d-c3d3-7347-ab39-44045145e21e&quot;,&quot;DocumentTitle&quot;:&quot;Society Declaration&quot;,&quot;DocumentFilePath&quot;:&quot;S3&quot;,&quot;DocumentCreatedOn&quot;:&quot;2023-08-17T10:30:26+05:30&quot;,&quot;DocumentFileUrl&quot;:&quot;https://crcs-staging.s3.ap-south-1.amazonaws.com/23072500029825/Society/23072500029825_25b6bc5a-6ffd-41c4-a6da-1ad762a828bf_Society%20Declaration?X-Amz-Expires=1800&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAR6VZYSQE6UIJDKWK/20230903/ap-south-1/s3/aws4_request&amp;X-Amz-Date=20230903T202704Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=5dc868fe221d089a33a61b56a03029373352276578b221cff6d309b1cdecf3aa&quot;,&quot;DocumentLevel&quot;:&quot;Society&quot;,&quot;DepositorClaimId&quot;:&quot;5abcb625-fd6f-c441-a6da-1ad762a828bf&quot;},{&quot;DepositorClaimDocumentId&quot;:&quot;b4d81ff7-d0fb-5140-99f7-104b5cc21d2c&quot;,&quot;DocumentTitle&quot;:&quot;Account Opening Form&quot;,&quot;DocumentFilePath&quot;:&quot;S3&quot;,&quot;DocumentCreatedOn&quot;:&quot;2023-08-17T10:30:26+05:30&quot;,&quot;DocumentFileUrl&quot;:&quot;https://crcs-staging.s3.ap-south-1.amazonaws.com/23072500029825/Depositor/23072500029825_25b6bc5a-6ffd-41c4-a6da-1ad762a828bf_Account%20Opening%20Form?X-Amz-Expires=1800&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAR6VZYSQE6UIJDKWK/20230903/ap-south-1/s3/aws4_request&amp;X-Amz-Date=20230903T202704Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=fc3410a860926e9b5de8b8362090786a09e59dc1b0d34c5e9d943bb57c1f25b1&quot;,&quot;DocumentLevel&quot;:&quot;Depositor&quot;,&quot;DepositorClaimId&quot;:&quot;5abcb625-fd6f-c441-a6da-1ad762a828bf&quot;},{&quot;DepositorClaimDocumentId&quot;:&quot;26c414de-8225-0e43-926e-276e115aa025&quot;,&quot;DocumentTitle&quot;:&quot;Membership Form&quot;,&quot;DocumentFilePath&quot;:&quot;S3&quot;,&quot;DocumentCreatedOn&quot;:&quot;2023-08-17T10:30:26+05:30&quot;,&quot;DocumentFileUrl&quot;:&quot;https://crcs-staging.s3.ap-south-1.amazonaws.com/23072500029825/Depositor/23072500029825_25b6bc5a-6ffd-41c4-a6da-1ad762a828bf_Membership%20Form?X-Amz-Expires=1800&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAR6VZYSQE6UIJDKWK/20230903/ap-south-1/s3/aws4_request&amp;X-Amz-Date=20230903T202704Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=f9d2b283c6f97830cdbf82257bbf78d830e34b3b1f069a4613dc459a924bfc07&quot;,&quot;DocumentLevel&quot;:&quot;Depositor&quot;,&quot;DepositorClaimId&quot;:&quot;5abcb625-fd6f-c441-a6da-1ad762a828bf&quot;},{&quot;DepositorClaimDocumentId&quot;:&quot;d961b3c2-c88e-458c-a8a5-f75a52d2a2f4&quot;,&quot;DocumentTitle&quot;:&quot;Recommendation By Auditor&quot;,&quot;DocumentFilePath&quot;:&quot;S3&quot;,&quot;DocumentCreatedOn&quot;:&quot;2023-09-02T20:22:58.166+05:30&quot;,&quot;DocumentFileUrl&quot;:&quot;https://crcs-staging.s3.ap-south-1.amazonaws.com/23072500029825/Auditor/23072500029825_25b6bc5a-6ffd-41c4-a6da-1ad762a828bf_Recommendation%20By%20Auditor?X-Amz-Expires=1800&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAR6VZYSQE6UIJDKWK/20230903/ap-south-1/s3/aws4_request&amp;X-Amz-Date=20230903T202704Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=f040c23ed1475bb84904f9fb0c188290b3f47806b60d579e9755bb829726df50&quot;,&quot;DocumentLevel&quot;:&quot;Auditor&quot;,&quot;DepositorClaimId&quot;:&quot;5abcb625-fd6f-c441-a6da-1ad762a828bf&quot;}],&quot;AuditorRemarks&quot;:{&quot;DepositorClaimDetailsId&quot;:&quot;5abcb625-fd6f-c441-a6da-1ad762a828bf&quot;,&quot;PratialPaid&quot;:true,&quot;FullName&quot;:true,&quot;FatherSpouseName&quot;:true,&quot;DOB&quot;:true,&quot;MembershipNo&quot;:true,&quot;AccountNo&quot;:true,&quot;CertificateNo&quot;:true,&quot;ReceiptNo&quot;:true,&quot;AccountOpeningDate&quot;:true,&quot;DepositAmount&quot;:true,&quot;LoanAmount&quot;:true,&quot;PartialLoanPaid&quot;:true,&quot;TotalAmountToRefund&quot;:true,&quot;AuditedOn&quot;:&quot;2023-09-02T20:22:58.158+05:30&quot;,&quot;AuditedByUserId&quot;:&quot;0347d2a4-bd9f-082b-e063-0100007fed60&quot;,&quot;AuditedByEmail&quot;:&quot;shilpbajaj2301@gmail.com&quot;,&quot;AuditedByName&quot;:&quot;HITESH&quot;,&quot;AuditedFromIPAddress&quot;:&quot;10.20.3.55&quot;,&quot;AuditResultApproveOrReject&quot;:&quot;Recommended&quot;}}" href="#">Recommend ?</a>
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+
+                <!-- Modal -->
+                <div class="modal fade" id="decisionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
+                        <div class="modal-content">
+                            <div class="modal-header" style="background-color: orange; color: white;">
+                                <h1 class="modal-title fs-5" id="decisionModalLabel">Claim Id - <span id="claimId"></span> | App/CRN No - <span id="crnNo"></span></h1>
+                                <button type="button" class="btn-close" style="margin-right:0;" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="decisionForm" name="decisionForm">
+                                    <div style="max-height:100%;">
+
+                                        <div class="row">
+                                            <div class="formui" style="width: 50% !important; overflow-y:auto; height:83vh;">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <div class="card-header" style="background-color: orange; color: white;">
+                                                            Non Financial Data
+                                                        </div>
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                                <tr>
+
+                                                                    <td>
+                                                                    </td>
+
+                                                                    <td style="font-weight: bold">
+                                                                        Aadhaar Data
+                                                                    </td>
+                                                                    <td style="font-weight: bold">
+                                                                        Member Dump
+                                                                    </td>
+                                                                    <td style="font-weight: bold">
+                                                                        Account Dump
+                                                                    </td>
+                                                                    <td>
+                                                                    </td>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="font-weight: bold;">Name:</td>
+                                                                    <td>GANESH KUMAR SATPATHY</td>
+                                                                    <td><label id="lblSocietyFullName"></label></td>
+                                                                    <td><label id="lblAccountFullName"></label></td>
+
+                                                                        <td style="width: 20px;">
+                                                                            <div style="display: flex; align-items: center;">
+                                                                                <input type="radio" class="radio-condition radio_btn" id="fullnameYes" name="fullname" value="yes" disabled="">
+                                                                                <label for="fullnameYes" style="margin-right: 10px;">Yes</label>
+                                                                                <input type="radio" class="radio-condition radio_btn" id="fullnameNo" name="fullname" value="no" disabled="">
+                                                                                <label for="fullnameNo">No</label>
+                                                                            </div>
+                                                                        </td>
+
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="font-weight: bold;">F/H Name:</td>
+                                                                    <td></td>
+                                                                    <td><label id="lblSocietyFHName"></label></td>
+                                                                    <td><label id="lblAccountFHName"></label></td>
+                                                                        <td style="width: 20px;">
+                                                                            <div style="display: flex; align-items: center;">
+                                                                                <input type="radio" class="radio_btn" id="fatherspousenameYes" name="fatherspousename" value="yes" disabled="">
+                                                                                <label for="fatherspousenameYes" style="margin-right: 10px;">Yes</label>
+                                                                                <input type="radio" class="radio_btn" id="fatherspousenameNo" name="fatherspousename" value="no" disabled="">
+                                                                                <label for="fatherspousenameNo">No</label>
+                                                                            </div>
+                                                                        </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="font-weight: bold;">DOB:</td>
+                                                                    <td>11-09-1995</td>
+                                                                    <td><label id="lblSocietyDOB"></label></td>
+                                                                    <td><label id="lblAccountDOB"></label></td>
+                                                                        <td style="width: 20px;">
+                                                                            <div style="display: flex; align-items: center;">
+                                                                                <input type="radio" class="radio_btn" id="dobYes" name="dob" value="yes" disabled="">
+                                                                                <label for="dobYes" style="margin-right: 10px;">Yes</label>
+                                                                                <input type="radio" class="radio_btn" id="dobNo" name="dob" value="no" disabled="">
+                                                                                <label for="dobNo">No</label>
+                                                                            </div>
+                                                                        </td>
+
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="card-body">
+                                                                    <div class="card-header" style="background-color: orange; color: white;">
+                                                                        Member Data (Depositor Entered)
+                                                                    </div>
+                                                                    <table class="table table-striped">
+                                                                        <tbody><tr>
+                                                                            <td style="width: 180px; font-weight: bold;">Member No:</td>
+                                                                            <td style="width: 150px;"><label id="decisionMembershipNo"></label></td>
+                                                                            <td>(Check with MF and AOF)</td>
+                                                                            <td style="width: 20px;">
+                                                                                <div style="display: flex; align-items: center;">
+                                                                                    <input type="radio" class="radio-condition radio_btn" id="MembershipYes" name="Membership" value="yes" disabled="">
+                                                                                    <label for="MembershipYes" style="margin-right: 10px;">Yes</label>
+                                                                                    <input type="radio" class="radio-condition radio_btn" id="MembershipNo" name="Membership" value="no" disabled="">
+                                                                                    <label for="MembershipNo">No</label>
+                                                                                </div>
+                                                                            </td>
+
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="width: 180px; font-weight: bold;">Account No:</td>
+                                                                            <td style="width: 150px;"><label id="decisionAccountNo">Account No:</label></td>
+                                                                            <td>(Check with Certificate Passbook)</td>
+                                                                            <td style="width: 20px;">
+                                                                                <div style="display: flex; align-items: center;">
+                                                                                    <input type="radio" class="radio-condition radio_btn" id="AccountYes" name="Account" value="yes" disabled="">
+                                                                                    <label for="AccountYes" style="margin-right: 10px;">Yes</label>
+                                                                                    <input type="radio" class="radio-condition radio_btn" id="AccountNo" name="Account" value="no" disabled="">
+                                                                                    <label for="AccountNo">No</label>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="width: 180px; font-weight: bold;">Certificate No:</td>
+                                                                            <td style="width: 150px;"><label id="decisionCertificateNo">Certificate No:</label></td>
+                                                                            <td>(Check with Cert / PB &amp; AOF)</td>
+                                                                            <td style="width: 20px;">
+                                                                                <div style="display: flex; align-items: center;">
+                                                                                    <input type="radio" class="radio_btn" id="CertificateYes" name="Certificate" value="yes" disabled="">
+                                                                                    <label for="CertificateYes" style="margin-right: 10px;">Yes</label>
+                                                                                    <input type="radio" class="radio_btn" id="CertificateNo" name="Certificate" value="no" disabled="">
+                                                                                    <label for="CertificateNo">No</label>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="width: 180px; font-weight: bold;">Receipt No:</td>
+                                                                            <td style="width: 150px;"><label id="decisionReceiptNo"></label></td>
+                                                                            <td>(Check with Cert / PB &amp; AOF)</td>
+                                                                            <td style="width: 20px;">
+                                                                                <div style="display: flex; align-items: center;">
+                                                                                    <input type="radio" class="radio_btn" id="chkReceiptYes" name="chkReceipt" value="yes" disabled="">
+                                                                                    <label for="chkReceiptYes" style="margin-right: 10px;">Yes</label>
+                                                                                    <input type="radio" class="radio_btn" id="chkReceiptNo" name="chkReceipt" value="no" disabled="">
+                                                                                    <label for="chkReceiptNo">No</label>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="width: 180px; font-weight: bold;">Account Opening Date:</td>
+                                                                            <td style="width: 150px;"><label id="decisionAccountOpeningDate"></label></td>
+                                                                            <td>(Check with Certificate Passbook)</td>
+                                                                            <td style="width: 20px;">
+                                                                                <div style="display: flex; align-items: center;">
+                                                                                    <input type="radio" class="radio_btn" id="AccountOpeningDateYes" name="AccountOpeningDate" value="yes" disabled="">
+                                                                                    <label for="AccountOpeningDateYes" style="margin-right: 10px;">Yes</label>
+                                                                                    <input type="radio" class="radio_btn" id="AccountOpeningDateNo" name="AccountOpeningDate" value="no" disabled="">
+                                                                                    <label for="AccountOpeningDateNo">No</label>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody></table>
+                                                                    <div class="card-header" style="background-color: orange; color: white;">
+                                                                        Financial Data
+                                                                    </div>
+                                                                    <table class="table table-striped">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <td></td>
+                                                                                <td style="font-weight: bold;">Depositor Entered</td>
+                                                                                <td style="font-weight: bold;">Society Entered</td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="font-weight: bold;">
+                                                                                    Depositor Amount (Certificate / Passbook)
+                                                                                </td>
+                                                                                <td>
+                                                                                    <label id="lblDepositorDepositAmount"></label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <label id="lblSocietyDepositAmount"></label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div style="display: flex; align-items: center;">
+                                                                                        <input type="radio" class="rowcheck radio_btn" id="DepositAmountYes" name="DepositAmount" value="yes" disabled="">
+                                                                                        <label for="DepositAmountYes" style="margin-right: 10px;">Yes</label>
+                                                                                        <input type="radio" class="rowcheck radio_btn" id="DepositAmountNo" name="DepositAmount" value="no" disabled="">
+                                                                                        <label for="DepositAmountNo">No</label>
+                                                                                    </div>
+                                                                                </td>
+
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="font-weight: bold;">
+                                                                                    Partial Paid
+                                                                                </td>
+                                                                                <td>
+                                                                                    ₹<label id="lblDepositorPartialPaid"></label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    ₹<label id="lblSocietyPartialPaid"></label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div style="display: flex; align-items: center;">
+                                                                                        <input type="radio" class="rowcheck radio_btn" id="chkPartialPaidAmountYes" name="chkPartialPaidAmount" value="yes" disabled="">
+                                                                                        <label for="chkPartialPaidAmountYes" style="margin-right: 10px;">Yes</label>
+                                                                                        <input type="radio" class="rowcheck radio_btn" id="chkPartialPaidAmountNo" name="chkPartialPaidAmount" value="no" disabled="">
+                                                                                        <label for="chkPartialPaidAmountNo">No</label>
+                                                                                    </div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="font-weight: bold;">
+                                                                                    Loan Amount
+                                                                                </td>
+                                                                                <td>
+                                                                                    ₹<label id="lblDepositorLoanAmount"></label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    ₹<label id="lblSocietyLoanAmount"></label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div style="display: flex; align-items: center;">
+                                                                                        <input type="radio" class="rowcheck radio_btn" id="LoanAmountYes" name="LoanAmount" value="yes" disabled="">
+                                                                                        <label for="LoanAmountYes" style="margin-right: 10px;">Yes</label>
+                                                                                        <input type="radio" class="rowcheck radio_btn" id="LoanAmountNo" name="LoanAmount" value="no" disabled="">
+                                                                                        <label for="LoanAmountNo">No</label>
+                                                                                    </div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="font-weight: bold;">
+                                                                                    Partial Loan Paid
+                                                                                </td>
+                                                                                <td>
+                                                                                    ₹<label id="lblDepositorPratialLoanPaid"></label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    ₹<label id="lblSocietyPratialLoanPaid"></label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div style="display: flex; align-items: center;">
+                                                                                        <input type="radio" class="rowcheck radio_btn" id="PartialLoanPaidYes" name="PartialLoanPaid" value="yes" disabled="">
+                                                                                        <label for="PartialLoanPaidYes" style="margin-right: 10px;">Yes</label>
+                                                                                        <input type="radio" class="rowcheck radio_btn" id="PartialLoanPaidNo" name="PartialLoanPaid" value="no" disabled="">
+                                                                                        <label for="PartialLoanPaidNo">No</label>
+                                                                                    </div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td style="font-weight: bold;">Total Amount to Refund</td>
+                                                                                <td>
+                                                                                    N/A
+                                                                                </td>
+                                                                                <td>
+                                                                                    ₹<label id="lblSocietyTotalRefundAmount"></label>
+
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div style="display: flex; align-items: center;">
+                                                                                        <input type="radio" class="rowcheck radio_btn" id="TotalAmounttoRefundYes" name="TotalAmounttoRefund" value="yes" disabled="">
+                                                                                        <label for="TotalAmounttoRefundYes" style="margin-right: 10px;">Yes</label>
+                                                                                        <input type="radio" class="rowcheck radio_btn" id="TotalAmounttoRefundNo" name="TotalAmounttoRefund" value="no" disabled="">
+                                                                                        <label for="TotalAmounttoRefundNo">No</label>
+                                                                                    </div>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                    <div class="mb-3 decisionDiv">
+                                                        <label class="form-label">Recommend </label>
+                                                        <select id="cmbApproveOrReject" name="cmbApproveOrReject">
+                                                            <option value="">- Select Recommendation -</option>
+                                                            <option value="Approve">Recommend</option>
+                                                            <option value="Reject">Don't Recommend</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="mb-3 reasondiv" style="display: none;">
+                                                        <label class="form-label">Not Recommendation Reason </label>
+                                                        <select id="cmbRejectReasons" name="cmbRejectReasons" multiple="multiple" style="display: none;">
+                                                                <option value="29">29 - The details have not been matched with the data dump/ records provided by the Society (Name/ Membership/ Account No. etc.)</option>
+                                                                <option value="30">30 - He has not provided proof of his deposit and proof of claim</option>
+                                                                <option value="33">33 - The Society has not recommended his claim</option>
+                                                                <option value="28">28 - He is not a genuine depositor/ member of the Society</option>
+                                                                <option value="31">31 - He has not provided/ uploaded the PAN Card (applicable only in cases where the total deposited principal amount is more than Rs.50,000/-)</option>
+                                                                <option value="32">32 - The deposit was made on or after 22.03.2022 in case of Sahara Credit Cooperative Society Ltd., Lucknow, Saharayn Universal Multipurpose Society Ltd., Bhopal and Humara India Credit Cooperative Society Ltd., Kolkata and on or after 29.03.2023 in case of Stars Multipurpose Cooperative Society Ltd., Hyderabad</option>
+                                                                <option value="34">34 - The auditor has not recommended his claim</option>
+                                                                <option value="35">35 - Claim is already refunded</option>
+                                                                <option value="45">45 - Dues to the Society exceed the claim</option>
+                                                        </select><div class="btn-group"><button type="button" class="multiselect dropdown-toggle btn btn-default" data-toggle="dropdown" title="None selected"><span class="multiselect-selected-text">None selected</span> <b class="caret"></b></button><ul class="multiselect-container dropdown-menu"><li class="multiselect-item multiselect-all"><a tabindex="0" class="multiselect-all"><label class="checkbox"><input type="checkbox" value="multiselect-all">  Select all</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="29"> 29 - The details have not been matched with the data dump/ records provided by the Society (Name/ Membership/ Account No. etc.)</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="30"> 30 - He has not provided proof of his deposit and proof of claim</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="33"> 33 - The Society has not recommended his claim</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="28"> 28 - He is not a genuine depositor/ member of the Society</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="31"> 31 - He has not provided/ uploaded the PAN Card (applicable only in cases where the total deposited principal amount is more than Rs.50,000/-)</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="32"> 32 - The deposit was made on or after 22.03.2022 in case of Sahara Credit Cooperative Society Ltd., Lucknow, Saharayn Universal Multipurpose Society Ltd., Bhopal and Humara India Credit Cooperative Society Ltd., Kolkata and on or after 29.03.2023 in case of Stars Multipurpose Cooperative Society Ltd., Hyderabad</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="34"> 34 - The auditor has not recommended his claim</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="35"> 35 - Claim is already refunded</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="45"> 45 - Dues to the Society exceed the claim</label></a></li></ul></div>
+                                                    </div>
+
+                                            </div>
+                                            <div class="col formdoc" style="border-left: 1px solid black; overflow-y:auto; height:84vh;">
+                                                <div id="decisionDocuments">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <div id="decisionErrorMsg" style="color: red;"></div>
+                                <button type="button" id="btnDecisionClose" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                                <span class="loader" style="display:none;">
+                                    <img src="/images/right_loader.gif" alt="" style="margin-left:1rem; width:2rem; height:2rem;"> <label data-hi="कृपया प्रतीक्षा करो" data-en="Please wait..">Please wait..</label>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!--Bank Details-->
+
+    </div><div class="sw-toolbar-elm toolbar toolbar-bottom" role="toolbar"><button class="btn sw-btn-prev sw-btn" type="button">Previous</button><button class="btn sw-btn-next sw-btn" type="button">Next</button><button class="btn orange-btn finish-step" style="display:none;" onclick="onFinish()"><label data-en="Exit" data-hi="निकास">Exit</label></button></div>
+
+    <!-- Include optional progressbar HTML -->
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 66.6667%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <br>
+    <br>
+</div>

@@ -1,0 +1,73 @@
+<div class="dashboard" style="height: 100%">
+    <div class="row">
+        <div class="container">
+            <section class="col-sm-12">
+                <a id="main-content"></a>
+                <div class="row justify-content-center">
+                    <h1 class="page-header" style="text-align-last: center; margin-top: 20px;"><span id="roleName">OSD</span>&nbsp;<label data-en="Log in" data-hi="लॉग इन करें">{{ 'login.Login' | translate }}</label></h1>
+
+                      <form class="user-login-form" (ngSubmit)="onSubmit()" id="user-login-form" accept-charset="UTF-8" style="width:30%">
+
+                        <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-name js-form-item-name form-group">
+                            <label for="edit-name" class="control-label js-form-required form-required" data-en="Email" data-hi="ईमेल">Email</label>
+                            <input autocorrect="none" autocapitalize="none" autocomplete="off" spellcheck="false" autofocus="autofocus"
+                                   data-drupal-selector="edit-name" class="form-text required form-control"
+                                   type="email"
+                                   id="email"
+                                   name="email"
+                                   value="" size="60" maxlength="60"
+                                   required="required" aria-required="true" title="" style="width: 300px;" data-toggle="tooltip" />
+                        </div>
+
+                        <div class="form-item js-form-item form-type-password js-form-type-password form-item-pass js-form-item-pass form-group">
+                            <label for="edit-pass" class="control-label js-form-required form-required" data-en="Password" data-hi="पासवर्ड">Password</label>
+                            <input data-drupal-selector="edit-pass" class="form-text required form-control" type="password" autocomplete="off"
+                                   id="password"                                    
+                                   name="password"
+                                   value=""
+                                   
+                                   minlength="5" required="required" aria-required="true" title="" style="width: 300px;" data-toggle="tooltip" />
+                        </div>
+
+                        <div>
+                            <label class="error-msg" style="color: red;"></label>
+                            <label class="success-msg" style="color: green; display:none;" data-en="User logged in successfully." data-hi="उपयोगकर्ता ने सफलतापूर्वक लॉग इन किया."> User Logged In Successfully. </label>
+                        </div>
+                        <div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions">
+                            <button [disabled]="loading" class="btn btn-primary">
+                                <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
+                                Log-In
+                            </button>
+                            <button data-drupal-selector="edit-submit" class="button js-form-submit form-submit btn-secondary btn icon-before" type="button" id="btnForgotPassword" name="btnForgotPassword" value="Forgot Password">
+                                <span class="icon glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                                <label data-en="Forgot Password" data-hi="पासवर्ड भूल गए?">Forgot Password</label>
+                            </button>
+
+                            <div>
+
+                                <label class="errormsgForgotpsd" style="color: red; display:none;" data-en="Please Enter Email" data-hi="कृपया ईमेल दर्ज करें">Please Enter Email</label>
+                            </div>
+
+                            <span class="loader" style="display:none;">
+                                <img src="~/images/right_loader.gif" alt="" style="margin-left:1rem; width:2rem; height:2rem;" /><label data-hi="कृपया प्रतीक्षा करो" data-en="Please Wait..">Please Wait..</label>
+                            </span>
+
+                        </div>
+                        <br />
+
+                        <div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions">
+
+                            <!-- <button data-drupal-selector="edit-submit" class="button js-form-submit form-submit btn-primary btn icon-before" type="button" id="btnResetPwd" name="op" value="Reset pwd">
+                                <span class="icon glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                                <label data-en="Reset Password" data-hi="पासवर्ड रीसेट करें">Reset Password</label>
+                            </button> -->
+
+                        </div>
+
+                    </form>
+
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
